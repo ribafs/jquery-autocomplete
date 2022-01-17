@@ -7,6 +7,11 @@ Depois de uma solicitação no grupo Comunidade Dev Angola por uma solicitação
 ## Site do ViaCEP
 https://viacep.com.br/
 
+## Site de onde baixei o exemplo original
+https://velhobit.com.br/programacao/carregando-cep-cidades-dinamicamente.html
+
+Gratidão a ambos os sites anteriores que me possibilitaram fazer isso.
+
 ## Licença
 MIT
 
