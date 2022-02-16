@@ -47,7 +47,7 @@
 			<option value="TO">Tocantins</option>
 		</select>
 		<label for="cep">CEP</label>
-		<input id="cep" type="text" class="form-control" onchange="numero.focus()" required/>
+		<input id="cep" type="text" class="form-control" onkeyup="javascript:JumpField(this);" size="8" maxlength="8" required/>
 		<label for="logradouro">Logradouro</label>
 		<input id="logradouro" type="text" class="form-control" required/>
 		<label for="bairro">Bairro</label>
@@ -59,6 +59,18 @@
 	</form>
 	</div>
 	<script type="text/javascript">
+function JumpField(fields) {
+ if (fields.value.length == fields.maxLength) {
+  for (var i = 0; i < fields.form.length; i++) {
+   if (fields.form[i] == fields && fields.form[(i + 1)] && fields.form[(i + 1)].type != "hidden") {
+        fields.form[(i + 1)].focus();
+        break;
+   }
+  }
+ }
+}
+// https://www.dfinformatica.net/?pg=desc-tutorial&id=91&nome=pular-campo-altomaticamente-(mudar-foco)
+
 		$("#cep").focusout(function(){
 			//Início do Comando AJAX
 			$.ajax({
